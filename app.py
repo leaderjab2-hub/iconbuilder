@@ -6,7 +6,7 @@ import io
 # --- 1. 환경 설정 ---
 # Google AI Studio에서 발급받은 API 키를 입력하세요.
 # 배포 시에는 st.secrets["GEMINI_API_KEY"]를 사용하는 것이 안전합니다.
-API_KEY = "YOUR_GEMINI_API_KEY" 
+API_KEY = "AIzaSyCQ9QbdslK7VF_5SVhFTHfpMKYcyRM-3x8" 
 genai.configure(api_key=API_KEY)
 
 # 모델 로드 (텍스트/SVG용: Gemini 1.5 Flash, 이미지용: Nano Banana 2)
