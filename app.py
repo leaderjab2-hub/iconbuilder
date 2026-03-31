@@ -43,8 +43,8 @@ st.caption("SKT 디자인 시스템 기반 아이콘 생성기 (Powered by Nano 
 
 with st.sidebar:
     st.header("설정")
-    style = st.selectbox("스타일", ["Line Icon", "2D Icon"])
-    method = st.selectbox("생성 방식", ["Image (Nano Banana 2)", "SVG Code"])
+    style = st.radio("스타일", ["2D Icon", "Line Icon"], index=0, horizontal=True)
+    method = st.radio("포맷", ["PNG", "SVG"], index=0, horizontal=True)
     
 keyword = st.text_input("아이콘 주제 입력", placeholder="예: 5G 기지국, 클라우드 서버...")
 
@@ -58,7 +58,7 @@ if st.button("아이콘 생성하기"):
         response_check = model_text.generate_content(SKT_GUIDELINE + check_prompt)
         st.info(response_check.text)
 
-        if method == "Image (Nano Banana 2)":
+        if method == "PNG":
             # 이미지 생성 프롬프트 조립
             prompt_type = "Line Icon" if style == "Line Icon" else "2D Icon"
             gen_prompt = f"Create a {prompt_type} for '{keyword}' following SKT brand guidelines."
