@@ -10,7 +10,7 @@ API_KEY = "AIzaSyCQ9QbdslK7VF_5SVhFTHfpMKYcyRM-3x8"
 genai.configure(api_key=API_KEY)
 
 # 모델 로드 (텍스트/SVG용: Gemini 1.5 Flash, 이미지용: Nano Banana 2)
-model_text = genai.GenerativeModel('gemini-1.5-flash')
+model_text = genai.GenerativeModel('gemini-pro')
 model_image = genai.GenerativeModel('gemini-3-flash-image') # Nano Banana 2
 
 # --- 2. 시스템 가이드라인 정의 ---
